@@ -1,10 +1,13 @@
 require 'guard/compat/plugin'
+require 'guard'
 
 module Guard
   class Reek < Plugin
     autoload :Executor, 'guard/reek/executor'
 
-    def start; end
+    def start
+      ::Guard::UI.info 'Guard::Reek is running'
+    end
 
     def reload; end
 
