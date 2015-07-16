@@ -1,4 +1,5 @@
-guard :reek do
+# The `cli` and `run_all_with` arguments are optional. Feel free to remove them
+guard :reek, cli: %w(-c .reek.yml), run_all_with: ['lib'] do
   watch(%r{^lib/(.+)\.rb$})
 
   # Rails example
